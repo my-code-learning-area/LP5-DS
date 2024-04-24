@@ -1,3 +1,5 @@
+# Steps to execute program
+
 ### Step 1: Set Path (give proper path to mpj-v0_44)
 
     export MPJ_HOME=~/Desktop/LP6-DS/mpj-v0_44
