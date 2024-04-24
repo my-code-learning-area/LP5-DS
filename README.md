@@ -28,3 +28,12 @@ To Install :
   In my Case : /usr/lib/jvm/java-8-openjdk-amd64
 
   Glassfish server version must be 4.1.1
+
+
+---
+---
+
+## Reference
+
+1. Harshavardhan Patil: [Distributed-Systems GitHub Link](https://github.com/HarshvardhanP01/Distributed-Systems/tree/main)
+2. Megha Dandapat (Senior): [BE-IT-DS GitHub Link](https://github.com/meghadandapat/BE-IT-DS)
