@@ -10,12 +10,10 @@ public class ArrSum {
 
         int unitSize = 5;
         int root = 0;
-        int sendBuffer[] = null;
-
         int totalElements = unitSize * size;
-
+        
         // 1 process is executed to handle 4 elements
-        sendBuffer = new int[totalElements];
+        int sendBuffer[] = new int[totalElements];
         int receiveBuffer[] = new int[unitSize];
         int newReceiveBuffer[] = new int[size];
 
