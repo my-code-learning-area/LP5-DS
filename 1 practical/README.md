@@ -16,6 +16,8 @@ ensure filename of your server
 
 ### Step 4: Now in Terminal 1
 
+ensure filename of your client
+
 `java Client localhost input1 input2`
 
 localhost = 127.0.0.1
