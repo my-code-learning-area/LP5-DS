@@ -2,6 +2,8 @@
 
 ### Step 1: Set Path (give proper path to mpj-v0_44)
 
+`export MPJ_HOME=<Path>`
+
     export MPJ_HOME=~/Desktop/LP6-DS/mpj-v0_44
 
 ### Step 2: Execute this command
