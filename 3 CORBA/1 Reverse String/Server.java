@@ -23,6 +23,10 @@ public class Server {
 		try { 	
             // initialize the ORB
 			ORB orb = ORB.init(args, null);
+			org.omg.CORBA.Object objRef = orb.resolve_initial_references("NameService");
+			NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
+			
+            NameComponent path[] = ncRef.to_name("Reverse"); 
 
 			// initialize the BOA/POA
 			POA rootPOA = POAHelper.narrow(orb.resolve_initial_references("RootPOA")); 
@@ -34,17 +38,8 @@ public class Server {
 			// get the object reference from the servant class 
 			org.omg.CORBA.Object ref = rootPOA.servant_to_reference(rvr);
 			
-			// Step 1
 			Reverse h_ref = ReverseModule.ReverseHelper.narrow(ref); 
-			
-            // Step 2
-			org.omg.CORBA.Object objRef = orb.resolve_initial_references("NameService");
-			
-			// Step 3
-			NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
 
-			// Step 4
-			NameComponent path[] = ncRef.to_name("Reverse"); 
 			ncRef.rebind(path,h_ref);
 			
 			System.out.println("Reverse Server reading and waiting....");
