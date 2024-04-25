@@ -14,7 +14,7 @@ class ReverseImpl extends ReversePOA {
 	public String reverse_string(String name) {
 		StringBuffer str=new StringBuffer(name); 
 		str.reverse(); 
-		return (("Server Send "+str));
+		return str.toString();
 	}
 }
 
@@ -28,25 +28,24 @@ public class Server {
 			// initialize the BOA/POA
 			POA rootPOA = POAHelper.narrow(orb.resolve_initial_references("RootPOA")); 
 			rootPOA.the_POAManager().activate();
+            
 			// creating the calculator object 
 			ReverseImpl rvr = new ReverseImpl();
 			
 			// get the object reference from the servant class 
 			org.omg.CORBA.Object ref = rootPOA.servant_to_reference(rvr);
 			
-			System.out.println("Step1");
+			// Step 1
 			Reverse h_ref = ReverseModule.ReverseHelper.narrow(ref); 
-			System.out.println("Step2");
 			
+            // Step 2
 			org.omg.CORBA.Object objRef = orb.resolve_initial_references("NameService");
 			
-			System.out.println("Step3");
+			// Step 3
 			NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
 
-			System.out.println("Step4");
-			
-			String name = "Reverse";
-			NameComponent path[] = ncRef.to_name(name); 
+			// Step 4
+			NameComponent path[] = ncRef.to_name("Reverse"); 
 			ncRef.rebind(path,h_ref);
 			
 			System.out.println("Reverse Server reading and waiting....");
