@@ -1,9 +1,8 @@
 import ReverseModule.*; 
 import org.omg.CosNaming.*;
 import org.omg.CORBA.*; 
-import org.omg.PortableServer.*;
 
-import ReverseModule.ReversePOA; 
+import org.omg.PortableServer.*;
 
 class ReverseImpl extends ReversePOA {
 	ReverseImpl() {
