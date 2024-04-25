@@ -4,7 +4,7 @@
 
 #### Step 1: 
 
-After executing this command, a new `ReverseModule` folder should be created
+After executing this command, **a new `ReverseModule` folder should be created**
 
     idlj -fall ReverseModule.idl
 
@@ -13,8 +13,6 @@ After executing this command, a new `ReverseModule` folder should be created
 
 After executing this command, warnings may come, Then it's OK. BUT 
 
-A new `orb.db` folder should be created
-
 **Ensure there is no error.**
 
     javac *.java ReverseModule/*.java
@@ -22,6 +20,8 @@ A new `orb.db` folder should be created
 #### Step 3:
 
 After executing this command if the terminal gets stuck, **then hit enter**.
+
+**A new `orb.db` folder should be created**
 
     orbd -ORBInitialPort 1056&
 
