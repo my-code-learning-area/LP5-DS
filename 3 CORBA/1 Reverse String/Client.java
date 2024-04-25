@@ -9,7 +9,7 @@ public class Client {
 		try {
 			// initialize the ORB 
 			ORB orb = ORB.init(args, null);
-			org.omg.CORBA.Object objRef = orb.resolve_initial_references ("NameService"); 
+			org.omg.CORBA.Object objRef = orb.resolve_initial_references("NameService"); 
 			NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
 
 			Reverse ReverseImpl = ReverseHelper.narrow(ncRef.resolve_str("Reverse"));
