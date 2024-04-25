@@ -8,7 +8,7 @@
 
     java TokenRing
 
-## Sample Inputs:
+# Sample Inputs:
 
 ```
     n = 8
