@@ -13,6 +13,8 @@ After executing this command, a new `ReverseModule` folder should be created
 
 After executing this command, warnings may come, Then it's OK. BUT 
 
+A new `orb.db` folder should be created
+
 **Ensure there is no error.**
 
     javac *.java ReverseModule/*.java
@@ -38,4 +40,4 @@ Ensure Proper Filename
 
 `java <ClientFileName> -ORBInitialPort 1056 -ORBInitialHost localhost`
 
-    java ReverseClient -ORBInitialPort 1056 -ORBInitialHost localhost
+    java Client -ORBInitialPort 1056 -ORBInitialHost localhost

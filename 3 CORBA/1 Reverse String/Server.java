@@ -4,7 +4,6 @@ import org.omg.CORBA.*;
 import org.omg.PortableServer.*;
 
 import ReverseModule.ReversePOA; 
-import java.lang.String; 
 
 class ReverseImpl extends ReversePOA {
 	ReverseImpl() {
