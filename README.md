@@ -1,13 +1,22 @@
 # Download JDK in ubuntu
 
+```
      sudo apt-get remove openjdk*
----
-     sudo apt update
----
-     sudo apt install openjdk-8-jdk openjdk-8-jre
----
-    java -version
+```
 
+```
+     sudo apt update
+```
+
+```
+     sudo apt install openjdk-8-jdk openjdk-8-jre
+```
+
+```
+     java -version
+```
+
+| it should have version start with 1.8... etc 
 ---
 ---
 ---
