@@ -38,9 +38,9 @@ public class Server {
 			// get the object reference from the servant class 
 			org.omg.CORBA.Object ref = rootPOA.servant_to_reference(rvr);
 			
-			Reverse h_ref = ReverseModule.ReverseHelper.narrow(ref); 
+			Reverse hRef = ReverseModule.ReverseHelper.narrow(ref); 
 
-			ncRef.rebind(path,h_ref);
+			ncRef.rebind(path,hRef);
 			
 			System.out.println("Reverse Server reading and waiting....");
 			orb.run();
