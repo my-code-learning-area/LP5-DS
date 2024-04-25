@@ -17,11 +17,17 @@
 
 #### Step 4:
 
-`java <ServerFileName> -ORBInitialPort 1056& `
+Ensure Proper Filename
+
+`java <ServerFileName> -ORBInitialPort 1056&`
 
     java Server -ORBInitialPort 1056& 
 
 
 ## 2. Execute Client (Terminal 2)
+
+Ensure Proper Filename
+
+`java <ClientFileName> -ORBInitialPort 1056 -ORBInitialHost localhost`
 
     java ReverseClient -ORBInitialPort 1056 -ORBInitialHost localhost
