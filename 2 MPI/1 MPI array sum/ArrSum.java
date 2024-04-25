@@ -53,12 +53,12 @@ public class ArrSum {
 
         // aggregate output from all non-root processes
         if(rank == root) {
-            int totalSum = 0;
+            int total = 0;
             for(int i = 0; i < size; i++) {
-                totalSum += newReceiveBuffer[i];
+                total += newReceiveBuffer[i];
             }
 
-            System.out.println("Final sum : " + totalSum);
+            System.out.println("Final sum : " + total);
         }
 
         MPI.Finalize();
