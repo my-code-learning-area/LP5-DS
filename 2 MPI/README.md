@@ -1,6 +1,7 @@
 # Steps to execute program (EASY)
 
 ### Step 1: Find the mpj-v0_44 path
+command to extract: **tar -xvzf mpj-v0_44.tar.gz**
 
 (you can find it where you have downloaded and extracted the tar.gz file)
 
