@@ -11,7 +11,7 @@ class ReverseImpl extends ReversePOA {
 	}
 
 	public String reverse_string(String name) {
-		StringBuffer str=new StringBuffer(name); 
+		StringBuffer str = new StringBuffer(name); 
 		str.reverse(); 
 		return str.toString();
 	}
