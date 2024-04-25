@@ -4,15 +4,23 @@
 
 #### Step 1: 
 
+After executing this command, a new `ReverseModule` folder should be created
+
     idlj -fall ReverseModule.idl
 
 
 #### Step 2:
 
+After executing this command, warnings may come, Then it's OK. BUT 
+
+**Ensure there is no error.**
+
     javac *.java ReverseModule/*.java
 
 #### Step 3:
-    
+
+After executing this command if the terminal gets stuck, **then hit enter**.
+
     orbd -ORBInitialPort 1056&
 
 #### Step 4:
