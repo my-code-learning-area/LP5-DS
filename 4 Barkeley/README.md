@@ -26,13 +26,13 @@ ensure filename of your Clock file
 
 ensure filename of your Clock file
 
-    java Clock c2 03:25:00
+    java Clock c2 03:00:00
 
 ### Step 4.3: Terminal 4
 
 ensure filename of your Clock file
 
-    java Clock c3 03:25:00
+    java Clock c3 02:55:00
 
 ## Step 5: Terminal 5
 
