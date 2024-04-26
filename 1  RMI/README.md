@@ -25,6 +25,11 @@ localhost = 127.0.0.1
     java Client localhost 2 3
 
 
+---
+---
+---
+
+
 ## 1.6 formula to convert Celsius to Fahrenheit
 
 where c is Celsius value
