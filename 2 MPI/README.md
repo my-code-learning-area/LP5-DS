@@ -15,7 +15,7 @@ command to extract: **tar -xvzf mpj-v0_44.tar.gz**
 
 `export MPJ_HOME=<Path>`
 
-    export MPJ_HOME=~/Desktop/LP6-DS/mpj-v0_44
+    export MPJ_HOME=/home/pavi/Desktop/LP6-DS/mpj-v0_44
 
 ### Step 2: Execute this command (run as it is)
 
