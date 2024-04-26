@@ -4,17 +4,17 @@
 
     javac *.java
 
-### Step 2: Terminal 2
+### Step 2: Terminal 1
 
     rmiregistry
 
-### Step 3: Terminal 3
+### Step 3: Terminal 2
 
 ensure filename of your server
 
     java Server
 
-### Step 4: Now in Terminal 1
+### Step 4: Terminal 3
 
 ensure filename of your client
 
