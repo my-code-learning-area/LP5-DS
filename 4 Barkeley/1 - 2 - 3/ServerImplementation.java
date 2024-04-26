@@ -1,7 +1,6 @@
 import java.rmi.*;
-import java.rmi.server.*;
-import java.time.*;
-import java.time.format.DateTimeFormatter;
+import java.time.LocalTime;
+import java.rmi.server.UnicastRemoteObject;
 
 public class ServerImplementation extends UnicastRemoteObject implements ServerInterface {
     LocalTime localTime;
@@ -16,7 +15,7 @@ public class ServerImplementation extends UnicastRemoteObject implements ServerI
 
     public void adjustTime(LocalTime serverTime, long diff) throws RemoteException {
         this.localTime = serverTime.plusSeconds(diff);
-        System.out.println("Adjusted time is: " + this.localTime.format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+        System.out.println("Adjusted time is: " + this.localTime);
     }
 
 }

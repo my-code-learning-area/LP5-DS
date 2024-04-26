@@ -1,5 +1,5 @@
 import java.rmi.*;
-import java.time.*;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class Clock {
