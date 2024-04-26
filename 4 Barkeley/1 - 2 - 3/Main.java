@@ -6,9 +6,9 @@ import java.time.format.DateTimeFormatter;
 public class Main {
     public static void main(String[] args) {
         try {
-            String clock1 = "rmi://" + "127.0.0.1/" + args[0];
-            String clock2 = "rmi://" + "127.0.0.1/" + args[1];
-            String clock3 = "rmi://" + "127.0.0.1/" + args[2];
+            String clock1 = "rmi://localhost/" + args[0];
+            String clock2 = "rmi://localhost/" + args[1];
+            String clock3 = "rmi://localhost/" + args[2];
 
             ServerInterface c1 = (ServerInterface) Naming.lookup(clock1);
             System.out.println(c1.getTime());
