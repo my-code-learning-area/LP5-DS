@@ -8,7 +8,7 @@ public class TokenRing {
         int n = sc.nextInt();
         
         // Decide the number of nodes forming the ring
-        int token = 2;
+        int token = 0;
 
         for(int i = 0; i < n; i++) 
             System.out.print(" " + i);
