@@ -26,13 +26,11 @@ public class TokenRing {
 
                 System.out.print("\n\nToken Passing:");
 
-                // current token not equal to sender, increment i and j by (j + 1) % n
                 for(int i = token; i != s; i = (i + 1) % n) {
                     System.out.print(" " + i + "->");
                 }
                 System.out.println(" " + s);
 
-                // start forwarding from node after sender until it becomes equal to receiver and increment  by (i + 1) % n
                 System.out.println("Sender " + s + " sending data: " + data);
                 for(int i = (s + 1) % n; i != r; i = (i + 1) % n) {
                     System.out.println("Data " + data + " forwarded by " + i);
