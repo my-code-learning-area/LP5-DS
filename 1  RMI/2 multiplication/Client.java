@@ -5,7 +5,7 @@ public class Client {
         try {
 
             // getting reference to the remote object
-            String url = "rmi://" + args[0] + "/Server";
+            String url = "rmi://localhost/Server";
             ServerIntF intF = (ServerIntF) Naming.lookup(url);
 
             double d1 = Double.parseDouble(args[1]);

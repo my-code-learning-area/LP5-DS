@@ -18,11 +18,9 @@ ensure filename of your server
 
 ensure filename of your client
 
-`java Client localhost input1 input2`
+`java Client input1 input2`
 
-localhost = 127.0.0.1
-
-    java Client localhost 2 3
+    java Client 2 3
 
 
 ---
