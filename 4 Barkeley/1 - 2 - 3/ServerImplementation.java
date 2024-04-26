@@ -17,8 +17,8 @@ public class ServerImplementation extends UnicastRemoteObject implements ServerI
     public void adjustTime(LocalTime serverTime, long diff) throws RemoteException {
         long adjustedSeconds = diff + serverTime.toSecondOfDay();
 
-        LocalTime adjustedTime = LocalTime.ofSecondOfDay(adjustedSeconds);
-        System.out.println("Adjusted time is: " + adjustedTime.format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+        this.localTime = LocalTime.ofSecondOfDay(adjustedSeconds);
+        System.out.println("Adjusted time is: " + this.localTime.format(DateTimeFormatter.ofPattern("HH:mm:ss")));
     }
 
 }

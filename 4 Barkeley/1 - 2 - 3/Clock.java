@@ -3,7 +3,7 @@ import java.rmi.registry.*;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
-public class C {
+public class Clock {
     public static void main(String args[]) {
         try {
             ServerImplementation serverImpl = new ServerImplementation(LocalTime.parse(args[1], DateTimeFormatter.ofPattern("HH:mm:ss")));
