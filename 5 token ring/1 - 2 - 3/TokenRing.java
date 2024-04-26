@@ -10,9 +10,8 @@ public class TokenRing {
         // Decide the number of nodes forming the ring
         int token = 0;
 
-        for(int i = 0; i < n; i++) {
+        for(int i = 0; i < n; i++)
             System.out.print(" " + i);
-        }
         System.out.println(" " + 0);
 
         try {
@@ -26,15 +25,14 @@ public class TokenRing {
 
                 System.out.print("\n\nToken Passing:");
 
-                for(int i = token; i != s; i = (i + 1) % n) {
+                for(int i = token; i != s; i = (i + 1) % n)
                     System.out.print(" " + i + "->");
-                }
                 System.out.println(" " + s);
 
+
                 System.out.println("Sender " + s + " sending data: " + data);
-                for(int i = (s + 1) % n; i != r; i = (i + 1) % n) {
+                for(int i = (s + 1) % n; i != r; i = (i + 1) % n)
                     System.out.println("Data " + data + " forwarded by " + i);
-                }
                 System.out.println("Receiver " + r + " received data: " + data);
 
                 token = s;
