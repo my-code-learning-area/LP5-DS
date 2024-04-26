@@ -9,7 +9,7 @@ public class Main {
             String clock2 = "rmi://localhost/" + args[1];
             String clock3 = "rmi://localhost/" + args[2];
 
-            erverInterface c1 = (ServerInterface) Naming.lookup(clock1);
+            ServerInterface c1 = (ServerInterface) Naming.lookup(clock1);
             ServerInterface c2 = (ServerInterface) Naming.lookup(clock2);
             ServerInterface c3 = (ServerInterface) Naming.lookup(clock3);
 
