@@ -27,7 +27,7 @@ public class TokenRing {
                 System.out.print("\n\nToken Passing:");
 
                 // current token not equal to sender, increment i and j by (j + 1) % n
-                for(int i = token; (i % n) != s; i = (i + 1) % n) {
+                for(int i = token; i != s; i = (i + 1) % n) {
                     System.out.print(" " + i + "->");
                 }
                 System.out.println(" " + s);
