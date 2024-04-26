@@ -9,8 +9,8 @@ public class Client {
             ServerInterface si = (ServerInterface) Naming.lookup(url);
 
             // preparing data
-            Double d1 = Double.parseDouble(args[1]);
-            Double d2 = Double.parseDouble(args[2]);
+            Double d1 = Double.parseDouble(args[0]);
+            Double d2 = Double.parseDouble(args[1]);
             System.out.println("d1 = " + d1);
             System.out.println("d2 = " + d2);        
 
