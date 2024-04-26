@@ -2,70 +2,67 @@ import java.util.*;
 
 public class Bully {
     int coordinator;
-    int max_processes;
+    int maxProcesses;
     boolean processes[];
 
     public Bully(int max) {
-        max_processes = max;
-        processes = new boolean[max_processes];
-        coordinator = max;
+        this.processes = new boolean[max];
+        this.maxProcesses = max;
+        this.coordinator = max;
 
-        System.out.println("Creating processes..");
+        System.out.println("Creating Processes..");
         for(int i = 0; i < max; i++) {
             processes[i] = true;
-            System.out.println("P"+ (i+1) + " created");
+            System.out.println("P"+(i+1)+" created");
         }
-        System.out.println("Process P" + coordinator + " is the coordinator");
-
+        System.out.println("Process P"+max+" is the coordinator");
     }
-    void displayProcesses() {
-        for(int i = 0; i < max_processes; i++) {
+
+    public void displayProcesses() {
+        for(int i = 0; i < this.maxProcesses; i++) {
             if(processes[i]) {
-                System.out.println("P" + (i+1) + " is up");
+                System.out.println("P"+(i+1)+" is up");
             } else {
-                System.out.println("P" + (i+1) + " is down");
+                System.out.println("P"+(i+1)+" is down");
             }
         }
-        System.out.println("Process P" + coordinator + " is the coordinator");
+        System.out.println("Process P"+this.coordinator+" is the coordinator");
     }
 
-    void upProcess(int process_id) {
-        if(!processes[process_id - 1]) {
-            processes[process_id - 1] = true;
-            System.out.println("Process " + process_id + " is now up.");
-        } else {
-            System.out.println("Process " + process_id + " is already up.");
+    void upProcess(int processID) {
+        if(!processes[processID - 1]) {
+            processes[processID - 1] = true;
+            System.out.println("Process P"+processID+" is up");
         }
     }
 
-    void downProcess(int process_id) {
-        if(!processes[process_id - 1]) {
-            System.out.println("Process " + process_id + " is already down.");
-        } else {
-            processes[process_id - 1] = false;
-            System.out.println("Process " + process_id + " is down.");
+    void downProcess(int processID) {
+        if(processes[processID - 1]) {
+            processes[processID - 1] = false;
+            System.out.println("Process P"+processID+" is down");
         }
     }
 
-    void runElection(int process_id) {
-        coordinator = process_id;
-        for(int i = process_id + 1; i <= max_processes; i++) {
-            System.out.println("Election message sent from process " + process_id + " to process " + i);
+    void runElection(int processID) {
+        this.coordinator = processID;
 
-            if(processes[i - 1]) {
-                runElection(i);
-                return; // Exit the function after recursion
+        for(int i = processID; i < this.maxProcesses; i++) {
+            System.out.println("Election message sent from P"+(i)+" to P"+(i+1));
+
+            if(processes[i]) {
+                runElection(i+1);
+                return;
             }
         }
     }
 
     public static void main(String args[]) {
         Bully bully = null;
-        int max_processes = 0, process_id = 0;
-        int choice = 0;
+        int maxProcesses = 0, processID = 0, choice = 0;
         Scanner sc = new Scanner(System.in);
 
         while(true) {
+            System.out.println("\n\n=============================");
             System.out.println("Bully Algorithm");
             System.out.println("1. Create processes");
             System.out.println("2. Display processes");
@@ -77,36 +74,41 @@ public class Bully {
             choice = sc.nextInt();
 
             switch(choice) {
-                case 1: 
+                case 1:
                     System.out.print("Enter the number of processes:- ");
-                    max_processes = sc.nextInt();
-                    bully = new Bully(max_processes);
+                    maxProcesses = sc.nextInt();
+                    bully = new Bully(maxProcesses);
                     break;
+                
                 case 2:
                     bully.displayProcesses();
                     break;
+
                 case 3:
                     System.out.print("Enter the process number to up:- ");
-                    process_id = sc.nextInt();
-                    bully.upProcess(process_id);
+                    processID = sc.nextInt();
+                    bully.upProcess(processID);
                     break;
+
                 case 4:
                     System.out.print("Enter the process number to down:- ");
-                    process_id = sc.nextInt();
-                    bully.downProcess(process_id);
+                    processID = sc.nextInt();
+                    bully.downProcess(processID);
                     break;
+
                 case 5:
                     System.out.print("Enter the process number which will perform election:- ");
-                    process_id = sc.nextInt();
-                    bully.runElection(process_id);
+                    processID = sc.nextInt();
+                    bully.runElection(processID);
                     bully.displayProcesses();
                     break;
+
                 case 6:
                     System.exit(0);
                     break;
+                
                 default:
                     System.out.println("Error in choice. Please try again.");
-                    break;
             }
         }
     }
